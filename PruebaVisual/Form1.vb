@@ -2,7 +2,7 @@
     Dim px, py As Integer
     Dim mover As Boolean
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Me.Dispose()
 
     End Sub
@@ -17,22 +17,46 @@
 
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
+    Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs)
         px = e.X
         py = e.Y
         mover = True
 
     End Sub
 
-    Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
+    Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs)
         mover = False
     End Sub
 
-    Private Sub PictureBox1_Move(sender As Object, e As EventArgs) Handles PictureBox1.Move
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        lblMensaje.Text = "Menú nuevo"
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Timer1.Start()
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        cargar.Increment(1)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Timer1.Stop()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        cargar.Increment(-100)
+        Timer1.Start()
+    End Sub
+
+
+
+    Private Sub PictureBox1_Move(sender As Object, e As EventArgs)
         If mover Then
             Me.Location = Me.PointToScreen(New Point(Me.MousePosition.X - Me.Location.X - px, Me.MousePosition.Y - Me.Location.Y - py))
 

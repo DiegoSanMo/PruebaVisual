@@ -124,6 +124,15 @@
   <ItemGroup>
     <None Include="Resources\minimize_thewindow_theapplication_2872.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\367992-74be3bf69a377a2a1eeefbdec872b859.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\367992-74be3bf69a377a2a1eeefbdec872b8591.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
