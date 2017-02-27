@@ -32,6 +32,7 @@
         mover = False
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         lblMensaje.Text = "Menú nuevo"
     End Sub
@@ -57,9 +58,20 @@
 
 
     Private Sub PictureBox1_Move(sender As Object, e As EventArgs)
+=======
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub PictureBox1_Move(sender As Object, e As EventArgs) Handles PictureBox1.Move
+>>>>>>> origin/master
         If mover Then
             Me.Location = Me.PointToScreen(New Point(Me.MousePosition.X - Me.Location.X - px, Me.MousePosition.Y - Me.Location.Y - py))
 
         End If
+    End Sub
+
+    Private Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
+        txtResultado.Text = Integer.Parse(txtNum1.Text) + Integer.Parse(txtNum2.Text)
     End Sub
 End Class
